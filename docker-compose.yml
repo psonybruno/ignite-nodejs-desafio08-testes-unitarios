@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+    database_ignite_07:
+        image: postgres
+        container_name: database_ignite_07
+        ports:
+         - 5432:5432
+        environment:
+         - POSTGRES_PASSWORD=docker
+         - POSTGRES_DB=fin_api
+         - POSTGRES_USER=postgres
+        volumes:
+         - pgdata:/data/postgres
+volumes:
+ pgdata:
